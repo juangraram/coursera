@@ -77,3 +77,11 @@ print(replace_ending("The weather is nice in May", "may", "april"))
 # Should display "The weather is nice in May"
 print(replace_ending("The weather is nice in May", "May", "April"))
 # Should display "The weather is nice in April"
+
+
+# Convert celsius
+def to_celsius(x):
+    return (x-32)*5/9
+# Iterate from 0 to 101 of 10 in 10
+for x in range(0,101,10):
+    print("{:>3} F - {:>6.2f} C".format(x, to_celsius(x)))

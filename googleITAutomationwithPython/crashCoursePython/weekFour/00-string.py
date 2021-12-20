@@ -37,4 +37,58 @@ print(formatted_string)
 
 
 # {:d} integer value
-'{:d}'.format(10.5)
+number = 10.5
+print('{:.2f}'.format(number))
+
+# Replace domain
+def replace_domain(email, old_domain, new_domain):
+    if "@" + old_domain in email:
+        index = email.index("@" + old_domain)
+        new_email = email[:index] + "@" + new_domain
+        return new_email
+    return email
+
+one = replace_domain("juan@tech.com", "tech.com", "fertech.com")
+print(one)
+
+# String methods
+print("Mountains".upper())
+print("Mountains".lower())
+
+answer = "YES"
+if answer.lower() == "yes":
+    print("User said yes")
+
+# Strip method
+print(" yes ".strip())
+
+# lstrip method
+print(" yes ".lstrip())
+
+# rstrip method
+print(" yes ".rstrip())
+
+# count method
+print("The number of times e occurs in this string is ".count("n"))
+
+# endswith method
+print("Forest".endswith("rest"))
+
+# isnumeric method
+print("Forest".isnumeric())
+
+# join method
+print("...".join(["This", "is", "phrase"]))
+
+# split method
+print("This is another example".split())
+
+nombre = "Manny"
+numberThree = len(nombre) * 3
+print("Hello {}, your lucky number is {}".format(nombre, numberThree))
+print(f"Your lucky number is {numberThree}, {nombre}.".format(nombre=nombre, numberThree=len(nombre)*3))
+
+price = 7.5
+with_tax = price * 1.09
+print(price, with_tax)
+print("Base price: ${:.2f}. With tax: ${:.2f}".format(price, with_tax))
